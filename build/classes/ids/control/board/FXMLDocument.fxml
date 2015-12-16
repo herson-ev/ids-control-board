@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?language javascript?>
+
+<?import java.net.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.chart.LineChart ?>
+
+<BorderPane xmlns:fx="http://javafx.com/fxml/1" fx:id="borderPane" styleClass="root" fx:controller="ids.control.board.FXMLDocumentController" >
+    <padding>
+        <Insets top="25" right="25" bottom="10" left="25"/>
+    </padding>
+    
+    <top>
+        <Text id="title" text="IDS Control Board" BorderPane.alignment="TOP_CENTER" 
+              GridPane.columnIndex="0" GridPane.rowIndex="0"
+              GridPane.columnSpan="2"/>
+    </top>
+    
+    <left>    
+        <VBox alignment="TOP_LEFT"  spacing="10"  >  
+            <Label text="Analyzers" />
+            <CheckBox text="DNS" selected="false"  fx:id="DNS"  onAction="#handleButtonActionDNS"/>
+            <CheckBox text="FTP" selected="false" fx:id="FTP" onAction="#handleButtonActionFTP"  />
+            <CheckBox text="HTTP" selected="false" fx:id="HTTP" onAction="#handleButtonActionHTTP"  />
+            <CheckBox text="IRC" selected="false" fx:id="IRC" onAction="#handleButtonActionIRC"  />
+            <CheckBox text="NFS" selected="false" fx:id="NFS" onAction="#handleButtonActionNFS"  />
+            <CheckBox text="POP3" selected="false" fx:id="POP3" onAction="#handleButtonActionPOP3"  />
+            <CheckBox text="SMB" selected="false" fx:id="SMB" onAction="#handleButtonActionSMB"  />
+            <CheckBox text="SMTP" selected="false" fx:id="SMTP" onAction="#handleButtonActionSMTP"  />
+            <CheckBox text="SNMP" selected="false" fx:id="SNMP" onAction="#handleButtonActionSNMP"  />
+            <CheckBox text="SSH" selected="false" fx:id="SSH" onAction="#handleButtonActionSSH"  />
+            <CheckBox text="SSL" selected="false"  fx:id="SSL" onAction="#handleButtonActionSSL"  /> 
+            
+        </VBox>
+    </left>
+    
+    <center>
+        <VBox alignment="TOP_CENTER" spacing="10" fx:id="middleBox" >
+        </VBox>
+    </center>
+    
+    <right><!--
+        <VBox alignment="TOP_LEFT"  spacing="10"  >
+            <Label text="Detection Stats" />
+            <TableView editable="false" >
+                <columns>
+                    <TableColumn text="Attack" resizable="true"  ></TableColumn>
+                    <TableColumn text="Instances" resizable="true"  ></TableColumn>
+                </columns>
+            </TableView>
+        </VBox>-->
+    </right>
+    
+    
+    <stylesheets>
+        <URL value="@login.css" />
+    </stylesheets>
+</BorderPane>
